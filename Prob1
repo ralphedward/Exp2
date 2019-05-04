@@ -1,0 +1,56 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	char bill;
+	int hours, a, b;
+	
+	cout << "Please enter your subscription package (A-C): ";
+	cin >> bill;
+	cout << "Please enter number of hours used: ";
+	cin >> hours;
+	
+	switch (bill)
+	{
+		case 'A':
+		case 'a':
+			a = 995 + ((hours - 10) * 20);
+			
+			if (hours > 10)
+			cout << "Your monthly due is P" << a << ". Thank you." << endl;
+			else
+			cout << "Your monthly due is P995.00. Thank you." << endl;
+			
+			_getch();
+			break;
+			
+		case 'B':
+		case 'b':
+			b = 1495 + ((hours - 20) * 10);
+			
+			if (hours > 20)
+			cout << "Your monthly due is P" << b << ". Thank you." << endl;
+			else
+			cout << "Your monthly due is P1495.00. Thank you." << endl;
+			
+			_getch();
+			break;
+			
+		case 'C':
+		case 'c':
+			
+			cout << "Your monthly due is P1995.00. Thank you." << endl;
+			_getch();
+			break;
+		
+		default:
+			cout << "Invalid subscription package!" << endl;
+	}
+	
+	
+	_getch();
+	return 0;
+}
