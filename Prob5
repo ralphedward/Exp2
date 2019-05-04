@@ -1,0 +1,23 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	int x, y;
+	
+	cout << "Counting...\n";
+	for (x = 1; x <= 10; x++)
+	{
+		cout << x << ", ";
+	}
+	
+	for (y = 12; y <= 30; y = y + 2)
+	{
+		cout << y << ", ";
+	}
+	
+	_getch();
+	return 0;
+}
