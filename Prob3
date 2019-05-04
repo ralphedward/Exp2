@@ -1,0 +1,64 @@
+#include <iostream>
+#include <conio.h>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+	int x, y;
+	float z, a, b, c, d, e, f, g;
+	
+	z = 2.5;
+	
+	cout << "Enter your first chosen integer: ";
+	cin >> x;
+	cout << "Enter your second chosen integer: ";
+	cin >> y;
+	
+	switch(x)
+	{
+		case 1:
+			a = x * y * z;
+			b = x + (y / z);
+			c = x + y + z;
+			
+			if (y > 1 && y < 5)
+			cout << "The value of V is " << a;
+			
+			else if (y >= 5)
+			cout << "The value of V is " << b;
+			
+			else
+			cout << "The value of V is " << c;
+			
+			break;
+			
+		case 2:
+			d = (x - y) / z;
+			e = ((x - y) / z) / -1;
+			f = x - sqrt(y + z);
+			
+			if (y <= 5 && y >= 2)
+			cout << "The value of V is " << e;
+			
+			else if (y < 2)
+			cout << "The value of V is " << d;
+			
+			else if (y > 5)
+			cout << "The value if V is " << f;
+			
+			break;
+			
+		default:
+			g = x + y + z;
+			
+			cout << "The value of V is " << g;
+			
+			break;
+	}
+	
+	
+	_getch();
+	return 0;
+}
