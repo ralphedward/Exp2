@@ -1,0 +1,27 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	int x = 1, y, z = 1;
+	
+	while (x > 0)
+	{
+	y = 0;
+	cout << "Enter a number: ";
+	cin >> x;
+	
+	for (z = 1;z <= x; z++)
+	{
+		y = y + z;
+	}
+	cout << "The summation of numbers 1 to " << x << " is " << y << endl;
+	}
+	
+	cout << "Thank you!" << endl;
+	
+	_getch();
+	return 0;
+}
