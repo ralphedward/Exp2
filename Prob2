@@ -1,0 +1,54 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	float current, previous, reading;
+	char balance;
+	
+	cout << "Please enter the amount of gallons from your previous reading: ";
+	cin >> previous;
+	cout << "Please enter amount of gallons in recent reading: ";
+	cin >> current;
+	cout << "Do you have an unpaid balance? (Y/N): ";
+	cin >> balance;
+	
+	switch(balance)
+	{
+		case 'Y':
+		case 'y':
+			reading = 35 + ((current - previous) * 1.10) + 20;
+	
+			if (current > previous)
+			cout << "The amount of your water bill is P" << reading;
+		
+			else if (balance > 0)
+			cout << "The amount of your water bill is P" << reading;
+	
+			else if (previous > current)
+			cout << "Invalid amount of previous reading!";
+			break;
+	
+		case 'N':
+		case 'n':
+			reading = 35 + ((current - previous) * 1.10);
+	
+			if (current > previous)
+			cout << "The amount of your water bill is P" << reading;
+	
+			else if (balance > 0)
+			cout << "The amount of your water bill is P" << reading;
+	
+			else if (previous > current)
+			cout << "Invalid amount of previous reading!";
+			break;
+			
+		default:
+			cout << "Invalid answer if you have unpaid balance!";
+	}	
+	
+	_getch();
+	return 0;
+}
